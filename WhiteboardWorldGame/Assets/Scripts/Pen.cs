@@ -21,19 +21,9 @@ public class Pen : MonoBehaviour {
                 m_pos = _hit.point + new Vector3(0,3,0);
                 gameObject.transform.position = m_pos;
 
-                if (Input.GetButton("Fire1"))
-                {
-                    InkTrail();
-                }
-
             }
         }
 
     }//End Update
-
-    private void InkTrail()
-    {
-
-    }
 
 }
