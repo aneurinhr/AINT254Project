@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Whiteboard
   - Ink
+  - Friendly
   layers:
   - Default
   - TransparentFX

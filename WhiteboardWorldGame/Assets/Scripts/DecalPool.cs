@@ -39,6 +39,18 @@ public class DecalPool : MonoBehaviour
         }
 
         currentDecal++;
+        UpdateCurrentDecals();
+
+    }
+
+    private void UpdateCurrentDecals()
+    {
+        GameObject[] _friends = GameObject.FindGameObjectsWithTag("Friendly");
+
+        for (int i = 0; i < _friends.Length; i++)
+        {
+            _friends[i].GetComponent<FriendMovement>().currentDecal = currentDecal;
+        }
 
     }
 
