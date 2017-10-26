@@ -34,8 +34,11 @@ public class ParticleLauncher : MonoBehaviour {
 
         for(int i = 0; i < m_collisionEvents.Count; i++)
         {
-            decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
-            EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
+            if (m_collisionEvents[i].colliderComponent.tag == "Whiteboard")
+            {
+                decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
+                EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
+            }
         }
     }//End Particle Collision Event
 

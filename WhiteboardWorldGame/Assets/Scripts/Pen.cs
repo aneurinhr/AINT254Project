@@ -16,12 +16,8 @@ public class Pen : MonoBehaviour {
 
         if (Physics.Raycast(_ray, out _hit))
         {
-            if (_hit.collider.tag.Equals("Whiteboard"))
-            {
-                m_pos = _hit.point + new Vector3(0,3,0);
-                gameObject.transform.position = m_pos;
-
-            }
+            m_pos = _hit.point + new Vector3(0,3,0);
+            gameObject.transform.position = m_pos;
         }
 
     }//End Update
