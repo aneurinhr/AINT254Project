@@ -21,20 +21,20 @@ GameObject:
   - component: {fileID: 4519835610801894}
   - component: {fileID: 33757335679883568}
   - component: {fileID: 23324919648908718}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: InkDecal
-  m_TagString: Ink
+  m_TagString: NextDecal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4519835610801894
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320463419415226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0001, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children: []

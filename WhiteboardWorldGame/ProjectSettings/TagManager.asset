@@ -7,6 +7,8 @@ TagManager:
   - Whiteboard
   - Ink
   - Friendly
+  - Start
+  - NextDecal
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - 
   - 
   - Whiteboard
-  - 
-  - 
-  - 
+  - Finish
+  - Start
+  - NextDecal
   - 
   - 
   - 

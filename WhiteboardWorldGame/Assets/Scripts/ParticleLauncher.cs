@@ -6,13 +6,15 @@ public class ParticleLauncher : MonoBehaviour {
 
     [SerializeField]
     private ParticleSystem m_particleLauncer;
-
     [SerializeField]
     private ParticleSystem m_splatterparticles;
+    [SerializeField]
+    private GameObject m_Whiteboard;
 
     public DecalPool decalPool;
 
     private List<ParticleCollisionEvent> m_collisionEvents; //To store the results of OnParticleCollsion
+    private bool m_CanDraw = false;
 
     private void Start()
     {
@@ -20,7 +22,10 @@ public class ParticleLauncher : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButton("Fire1"))
+
+        m_CanDraw = m_Whiteboard.GetComponent<WhiteboardObjects>().penOverWhiteboard;
+        
+        if ((Input.GetButton("Fire1")) && (m_CanDraw == true))
         {
             //In Future, move pen down to draw and then emit
             m_particleLauncer.Emit(1);
@@ -34,7 +39,7 @@ public class ParticleLauncher : MonoBehaviour {
 
         for(int i = 0; i < m_collisionEvents.Count; i++)
         {
-            if (m_collisionEvents[i].colliderComponent.tag == "Whiteboard")
+            if ((m_collisionEvents[i].colliderComponent.tag == "Start") || (m_collisionEvents[i].colliderComponent.tag == "Finish") || (m_collisionEvents[i].colliderComponent.tag == "NextDecal"))
             {
                 decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
                 EmitAtLocatin(m_collisionEvents[i]); //Places the splatter

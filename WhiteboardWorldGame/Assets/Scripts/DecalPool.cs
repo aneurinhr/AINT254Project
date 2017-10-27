@@ -7,6 +7,8 @@ public class DecalPool : MonoBehaviour
 
     [SerializeField]
     private GameObject m_inkDecal;
+    [SerializeField]
+    private GameObject m_NextDecal;
 
     public GameObject[] decalArray;
     public int decalPool = 100;
@@ -30,12 +32,33 @@ public class DecalPool : MonoBehaviour
     public void PlaceDecal(ParticleCollisionEvent _collisionEvent)
     {
 
+        if (currentDecal == 0)
+        {
+            if (_collisionEvent.colliderComponent.tag == "Start")
+            {
+                DecalPosition(_collisionEvent);
+            }
+        }
+        else
+        {
+            if (_collisionEvent.colliderComponent.tag == "NextDecal")
+            {
+                DecalPosition(_collisionEvent);
+            }
+        }
+
+    }
+
+    private void DecalPosition(ParticleCollisionEvent _collisionEvent)
+    {
+
         if (currentDecal < decalPool)
         {
             decalArray[currentDecal].SetActive(true);
             Vector3 tempPosition = _collisionEvent.intersection;
             tempPosition.y = 0.01f;
             decalArray[currentDecal].transform.position = tempPosition;
+            m_NextDecal.transform.position = tempPosition;
         }
 
         currentDecal++;
