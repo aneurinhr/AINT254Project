@@ -12,6 +12,7 @@ public class FriendMovement : MonoBehaviour
     public Transform goal;
     public int currentDecal = 0;
     public float speed = 5.0f;
+    public bool finished = false;
 
     private int m_DecalTarget = 0;
     private bool m_NewTarget = true;
@@ -23,26 +24,34 @@ public class FriendMovement : MonoBehaviour
 
     void Update () {
 
-        if (currentDecal == 1)//should only play once
-        {
-            m_DecalTarget = currentDecal;
-        }
+        if (finished == false) {
 
-        if ((m_NewTarget == true)&&(m_DecalTarget > 0))
-        {
-            m_NewTarget = false;
-        }
-
-        float _step = speed * Time.deltaTime;
-
-        if ((m_DecalTarget < (currentDecal - friendID)) && (m_DecalTarget > 0))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position, _step);
-
-            if ((transform.position == m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position))
+            if (currentDecal == 1)//should only play once
             {
-                m_NewTarget = true;
-                m_DecalTarget = m_DecalTarget + 1;
+                m_DecalTarget = currentDecal;
+            }
+
+            if (currentDecal < m_DecalTarget)
+            {
+                m_DecalTarget = currentDecal;
+            }
+
+            if ((m_NewTarget == true) && (m_DecalTarget > 0))
+            {
+                m_NewTarget = false;
+            }
+
+            float _step = speed * Time.deltaTime;
+
+            if ((m_DecalTarget < (currentDecal - friendID)) && (m_DecalTarget > 0))
+            {
+                transform.position = Vector3.MoveTowards(transform.position, m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position, _step);
+
+                if ((transform.position == m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position))
+                {
+                    m_NewTarget = true;
+                    m_DecalTarget = m_DecalTarget + 1;
+                }
             }
         }
 

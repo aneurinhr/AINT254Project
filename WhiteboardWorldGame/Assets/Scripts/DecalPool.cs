@@ -10,6 +10,7 @@ public class DecalPool : MonoBehaviour
     [SerializeField]
     private GameObject m_NextDecal;
 
+    public GameObject finish;
     public GameObject[] decalArray;
     public int decalPool = 100;
 
@@ -18,6 +19,9 @@ public class DecalPool : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        finish.GetComponent<Finish>().currentDecal = currentDecal;
+        finish.GetComponent<Finish>().maxDecals = decalPool;
+
         GameObject temp;
         decalArray = new GameObject[decalPool];
 
@@ -59,10 +63,9 @@ public class DecalPool : MonoBehaviour
             tempPosition.y = 0.01f;
             decalArray[currentDecal].transform.position = tempPosition;
             m_NextDecal.transform.position = tempPosition;
+            currentDecal++;
+            UpdateCurrentDecals();
         }
-
-        currentDecal++;
-        UpdateCurrentDecals();
 
     }
 
@@ -75,6 +78,7 @@ public class DecalPool : MonoBehaviour
             _friends[i].GetComponent<FriendMovement>().currentDecal = currentDecal;
         }
 
+        finish.GetComponent<Finish>().currentDecal = currentDecal;
     }
 
     private void OnGUI()
