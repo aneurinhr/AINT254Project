@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23324919648908718}
   - component: {fileID: 54528867249232076}
   - component: {fileID: 64323333724516190}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: InkDecal
-  m_TagString: NextDecal
+  m_TagString: Ink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

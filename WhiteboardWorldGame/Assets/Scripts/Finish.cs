@@ -27,7 +27,7 @@ public class Finish : MonoBehaviour {
             other.transform.position = transform.position;
             m_NumFin++;
         }
-        else if (other.gameObject.tag == "NextDecal")
+        else if (other.gameObject.tag == "Ink")
         {
             m_possible = true;
         }
