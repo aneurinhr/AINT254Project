@@ -29,7 +29,6 @@ public class Finish : MonoBehaviour {
         }
         else if (other.gameObject.tag == "NextDecal")
         {
-            Debug.Log("Inked Finish");
             m_possible = true;
         }
 

@@ -9,6 +9,7 @@ TagManager:
   - Friendly
   - Start
   - NextDecal
+  - Obstacles
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Finish
   - Start
   - NextDecal
-  - 
+  - Obstables
   - 
   - 
   - 
