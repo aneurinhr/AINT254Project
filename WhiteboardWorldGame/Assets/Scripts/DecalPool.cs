@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DecalPool : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DecalPool : MonoBehaviour
     private GameObject m_NextDecal;
 
     public GameObject finish;
+    public Slider inkUI;
     public GameObject[] decalArray;
     public int decalPool = 100;
 
@@ -31,6 +33,10 @@ public class DecalPool : MonoBehaviour
             decalArray[i] = temp;
             decalArray[i].SetActive(false);
         }
+
+        inkUI.maxValue = decalPool;
+        inkUI.value = inkUI.maxValue;
+
     }
 
     public void PlaceDecal(ParticleCollisionEvent _collisionEvent)
@@ -64,7 +70,14 @@ public class DecalPool : MonoBehaviour
             decalArray[currentDecal].transform.position = tempPosition;
             m_NextDecal.transform.position = tempPosition;
             currentDecal++;
+
             UpdateCurrentDecals();
+            inkUI.value = decalPool - currentDecal;
+
+            if (inkUI.value == 0)
+            {
+                inkUI.gameObject.SetActive(false);
+            }
         }
 
     }
@@ -79,18 +92,5 @@ public class DecalPool : MonoBehaviour
         }
 
         finish.GetComponent<Finish>().currentDecal = currentDecal;
-    }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(5.0f, 10.0f, 100.0f, 20.0f), "Ink Left: ");
-
-        int _inkLeft = decalPool - currentDecal;
-
-        if (_inkLeft < 0)
-            _inkLeft = 0;
-
-        GUI.Label(new Rect(75.0f, 10.0f, 100.0f, 20.0f), _inkLeft.ToString());
-
     }
 }
