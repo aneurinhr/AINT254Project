@@ -2096,7 +2096,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
+  m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2375,7 +2375,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1803399085
+  randomSeed: 259701879
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5692,7 +5692,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1959679270
+  randomSeed: 1876962350
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9229,6 +9229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_camera: {fileID: 2018319130}
+  speed: 0
 --- !u!1 &1666898535
 GameObject:
   m_ObjectHideFlags: 0

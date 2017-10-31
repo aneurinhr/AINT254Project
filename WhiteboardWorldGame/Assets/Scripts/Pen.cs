@@ -7,6 +7,8 @@ public class Pen : MonoBehaviour {
     [SerializeField]
     private Camera m_camera;
 
+    public float speed;
+
     private Vector3 m_pos;
 
     void Update()

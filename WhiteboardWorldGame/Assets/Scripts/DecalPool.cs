@@ -65,10 +65,13 @@ public class DecalPool : MonoBehaviour
         if (currentDecal < decalPool)
         {
             decalArray[currentDecal].SetActive(true);
+
             Vector3 tempPosition = _collisionEvent.intersection;
             tempPosition.y = 0.01f;
+
             decalArray[currentDecal].transform.position = tempPosition;
             m_NextDecal.transform.position = tempPosition;
+
             currentDecal++;
 
             UpdateCurrentDecals();
