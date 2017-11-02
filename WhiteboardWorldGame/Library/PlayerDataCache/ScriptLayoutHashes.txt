@@ -1,10 +1,11 @@
 WindowsStandalone
 63476c3cd723e567416f94104be571f7 Assembly-CSharp.dll:.ResetQuitBut
-63ee4d254596e7e33706786578d0fdfc Assembly-CSharp.dll:.Pen
+f038cbd8af3c139dd85e78ed17fa1c49 Assembly-CSharp.dll:.Pen
 83dd0e46297f564da783271fe8438b65 Assembly-CSharp.dll:.ParticleLauncher
 f225b0ba3ac33a5d5e1b14a169ab49a7 Assembly-CSharp.dll:.SplatOnCollision
 c8d246d3303bdfd6b7398acf1f38d8d2 Assembly-CSharp.dll:.FriendMovement
 8efe051981f58a479090da332733c1e4 Assembly-CSharp.dll:.Finish
+2b009ed5d45af70a9e9cd9186acb7db5 Assembly-CSharp.dll:.Buttons
 59b8f86a1ad56cbd39be97f4e679ce34 Assembly-CSharp.dll:.WhiteboardObjects
 99c5d33004b39d3e741219dd30afca0d Assembly-CSharp.dll:.DecalPool
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WinLoseButtons
@@ -138,4 +139,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
-2b009ed5d45af70a9e9cd9186acb7db5 Assembly-CSharp.dll:.Buttons
