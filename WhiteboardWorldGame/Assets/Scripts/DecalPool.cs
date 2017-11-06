@@ -15,14 +15,19 @@ public class DecalPool : MonoBehaviour
     public Slider inkUI;
     public GameObject[] decalArray;
     public int decalPool = 100;
+    public bool blackInk = false;
+    public string nextDecal;
 
     private int currentDecal = 0;
 
     // Use this for initialization
     void Start()
     {
-        finish.GetComponent<Finish>().currentDecal = currentDecal;
-        finish.GetComponent<Finish>().maxDecals = decalPool;
+        if (blackInk == true)//Only 1 pool is black ink
+        {
+            finish.GetComponent<Finish>().currentDecal = currentDecal;
+            finish.GetComponent<Finish>().maxDecals = decalPool;
+        }
 
         GameObject temp;
         decalArray = new GameObject[decalPool];
@@ -42,7 +47,7 @@ public class DecalPool : MonoBehaviour
     public void PlaceDecal(ParticleCollisionEvent _collisionEvent)
     {
 
-        if (currentDecal == 0)
+        if ((currentDecal == 0) && (blackInk == true))
         {
             if (_collisionEvent.colliderComponent.tag == "Start")
             {
@@ -51,7 +56,7 @@ public class DecalPool : MonoBehaviour
         }
         else
         {
-            if (_collisionEvent.colliderComponent.tag == "NextDecal")
+            if (_collisionEvent.colliderComponent.tag == nextDecal)
             {
                 DecalPosition(_collisionEvent);
             }
@@ -76,24 +81,22 @@ public class DecalPool : MonoBehaviour
 
             UpdateCurrentDecals();
             inkUI.value = decalPool - currentDecal;
-
-            if (inkUI.value == 0)
-            {
-                inkUI.gameObject.SetActive(false);
-            }
         }
 
     }
 
     private void UpdateCurrentDecals()
     {
-        GameObject[] _friends = GameObject.FindGameObjectsWithTag("Friendly");
-
-        for (int i = 0; i < _friends.Length; i++)
+        if (blackInk == true)//Only 1 pool is black ink
         {
-            _friends[i].GetComponent<FriendMovement>().currentDecal = currentDecal;
-        }
+            GameObject[] _friends = GameObject.FindGameObjectsWithTag("Friendly");
 
-        finish.GetComponent<Finish>().currentDecal = currentDecal;
+            for (int i = 0; i < _friends.Length; i++)
+            {
+                _friends[i].GetComponent<FriendMovement>().currentDecal = currentDecal;
+            }
+
+            finish.GetComponent<Finish>().currentDecal = currentDecal;
+        }
     }
 }
