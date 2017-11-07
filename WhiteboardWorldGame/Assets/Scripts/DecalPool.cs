@@ -75,7 +75,11 @@ public class DecalPool : MonoBehaviour
             tempPosition.y = 0.01f;
 
             decalArray[currentDecal].transform.position = tempPosition;
-            m_NextDecal.transform.position = tempPosition;
+
+            if (blackInk == true)
+            {
+                m_NextDecal.transform.position = tempPosition;
+            }
 
             currentDecal++;
 

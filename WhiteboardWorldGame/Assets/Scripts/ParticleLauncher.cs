@@ -17,6 +17,7 @@ public class ParticleLauncher : MonoBehaviour {
 
     private List<ParticleCollisionEvent> m_collisionEvents; //To store the results of OnParticleCollsion
     private bool m_CanDraw = false;
+    private bool m_fireDown = false;
 
     private void Start()
     {
@@ -29,9 +30,21 @@ public class ParticleLauncher : MonoBehaviour {
 
         if ((Input.GetButton("Fire1")) && (m_CanDraw == true))
         {
-            m_particleLauncer.Emit(1);
+            m_fireDown = true;
+        }
+        else
+        {
+            m_fireDown = false;
         }
     }//End Update
+
+    private void FixedUpdate()
+    {
+        if ((Input.GetButton("Fire1")) && (m_CanDraw == true))
+        {
+            m_particleLauncer.Emit(1);
+        }
+    }
 
     private void OnParticleCollision(GameObject other)//Checks where the particles hit
     {
@@ -49,7 +62,7 @@ public class ParticleLauncher : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log(m_collisionEvents[i].colliderComponent.tag);
+                    //Debug.Log(m_collisionEvents[i].colliderComponent.tag);
                 }
 
             }
@@ -63,10 +76,12 @@ public class ParticleLauncher : MonoBehaviour {
                 }
                 else
                 {
-                    Debug.Log(m_collisionEvents[i].colliderComponent.tag);
+                    //Debug.Log(m_collisionEvents[i].colliderComponent.tag);
                 }
 
             }
+
+            Debug.Log(m_collisionEvents[i].colliderComponent.tag);
         }
     }//End Particle Collision Event
 
