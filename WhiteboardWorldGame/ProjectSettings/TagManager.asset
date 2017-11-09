@@ -13,6 +13,8 @@ TagManager:
   - RedInk
   - BlueInk
   - OtherNextDecal
+  - RedMagnet
+  - BlueMagnet
   layers:
   - Default
   - TransparentFX
