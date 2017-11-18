@@ -45,7 +45,9 @@ public class FriendMovement : MonoBehaviour
 
             if ((m_DecalTarget < (currentDecal - friendID)) && (m_DecalTarget > 0))
             {
-                transform.position = Vector3.MoveTowards(transform.position, m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position, _step);
+                Vector3 _moveTo = m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position;
+
+                transform.position = Vector3.MoveTowards(transform.position, _moveTo, _step);
 
                 if ((transform.position == m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position))
                 {

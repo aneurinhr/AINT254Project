@@ -81,7 +81,6 @@ public class ParticleLauncher : MonoBehaviour {
 
             }
 
-            Debug.Log(m_collisionEvents[i].colliderComponent.tag);
         }
     }//End Particle Collision Event
 
