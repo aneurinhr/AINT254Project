@@ -5,8 +5,6 @@ using UnityEngine;
 public class Finish : MonoBehaviour {
 
     [SerializeField]
-    private int m_numFriend = 0;
-    [SerializeField]
     private GameObject m_player;
     [SerializeField]
     private GameObject m_Win;
@@ -18,6 +16,7 @@ public class Finish : MonoBehaviour {
 
     public int maxDecals = 100;
     public int currentDecal = 0;
+    public int m_numFriend = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,12 +35,12 @@ public class Finish : MonoBehaviour {
 
     private void Update()
     {
-        if (m_NumFin == m_numFriend)
+        if ((m_NumFin == m_numFriend) && (m_numFriend > 0))
         {
             m_player.SetActive(false);
             m_Win.SetActive(true);
         }
-        else if ((currentDecal >= maxDecals) && (m_possible == false))
+        else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
         {
             m_player.SetActive(false);
             m_Lose.SetActive(true);
