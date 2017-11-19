@@ -7,11 +7,18 @@ public class StopSameColour : MonoBehaviour {
 
     public string blockTag;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == blockTag)
         {
-            other.GetComponent<NavMeshAgent>().isStopped = true;
+            if (blockTag == "BlueMagnet")
+            {
+                other.GetComponent<BlueMovement>().Stop(transform);
+            }
+            else if (blockTag == "RedMagnet")
+            {
+                other.GetComponent<Chase>().Stop(transform);
+            }
         }
     }
 }

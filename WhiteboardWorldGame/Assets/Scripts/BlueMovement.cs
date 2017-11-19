@@ -9,36 +9,49 @@ public class BlueMovement : MonoBehaviour {
 
     private int m_counter = 0;
     private bool foward = true;
+    private bool stop = false;
 
     void Update () {
-        
-        GetComponent<NavMeshAgent>().destination = travelLocations[m_counter].position;
 
-        if ((transform.position.x == travelLocations[m_counter].position.x) && (transform.position.z == travelLocations[m_counter].position.z) && (foward == true))
+        if (stop == false)
         {
-            if (m_counter == travelLocations.Length - 1)
-            {
-                foward = false;
-                m_counter--;
-            }
-            else
-            {
-                m_counter++;
-            }
 
-        }
-        else if ((transform.position.x == travelLocations[m_counter].position.x) && (transform.position.z == travelLocations[m_counter].position.z) && (foward == false))
-        {
-            if (m_counter == 0)
+            GetComponent<NavMeshAgent>().destination = travelLocations[m_counter].position;
+
+            if ((transform.position.x == travelLocations[m_counter].position.x) && (transform.position.z == travelLocations[m_counter].position.z) && (foward == true))
             {
-                foward = true;
-                m_counter++;
+                if (m_counter == travelLocations.Length - 1)
+                {
+                    foward = false;
+                    m_counter--;
+                }
+                else
+                {
+                    m_counter++;
+                }
+
             }
-            else
+            else if ((transform.position.x == travelLocations[m_counter].position.x) && (transform.position.z == travelLocations[m_counter].position.z) && (foward == false))
             {
-                m_counter--;
+                if (m_counter == 0)
+                {
+                    foward = true;
+                    m_counter++;
+                }
+                else
+                {
+                    m_counter--;
+                }
+
             }
 
         }
     }
+
+    public void Stop(Transform _decal)
+    {
+        stop = true;
+        GetComponent<NavMeshAgent>().destination = _decal.position;
+    }
+
 }

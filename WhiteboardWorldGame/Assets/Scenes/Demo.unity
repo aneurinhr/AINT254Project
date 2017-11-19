@@ -305,6 +305,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54047719555206382, guid: 55ff52a2f1836a144af779ac7e521f67,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54047719555206382, guid: 55ff52a2f1836a144af779ac7e521f67,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55ff52a2f1836a144af779ac7e521f67, type: 2}
   m_IsPrefabParent: 0
@@ -570,6 +580,16 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: seeDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 54307984242145254, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
@@ -11641,6 +11661,11 @@ Prefab:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1384565100}
+    - target: {fileID: 54696949025043958, guid: feda0bacc6d34c74cbcc1eafa4a0e02c,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: feda0bacc6d34c74cbcc1eafa4a0e02c, type: 2}
   m_IsPrefabParent: 0

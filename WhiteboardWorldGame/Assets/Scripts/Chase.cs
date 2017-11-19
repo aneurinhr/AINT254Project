@@ -11,6 +11,7 @@ public class Chase : MonoBehaviour {
     private List<GameObject> m_greenMagnets = new List<GameObject>();
     private int currentSearch = 0;
     private bool m_seen = false;
+    private bool stop = false;
 
     private void Start()
     {
@@ -19,24 +20,27 @@ public class Chase : MonoBehaviour {
 
     private void Update()
     {
-        if (currentSearch < 1)
+        if (stop == false)
         {
-            m_seen = false;
-        }
-
-        if ((m_greenMagnets.Count > 1) && (m_seen == false))
-        {
-
-            for (int i = 1; i < m_greenMagnets.Count; i++)
+            if (currentSearch < 1)
             {
-                DetectGreenMagnets(m_greenMagnets[i]);
+                m_seen = false;
             }
 
-        }
-        else if (m_seen == true)
-        {
-            goal = m_greenMagnets[currentSearch].transform;
-            GetComponent<NavMeshAgent>().destination = goal.position;
+            if ((m_greenMagnets.Count > 1) && (m_seen == false))
+            {
+
+                for (int i = 1; i < m_greenMagnets.Count; i++)
+                {
+                    DetectGreenMagnets(m_greenMagnets[i]);
+                }
+
+            }
+            else if (m_seen == true)
+            {
+                goal = m_greenMagnets[currentSearch].transform;
+                GetComponent<NavMeshAgent>().destination = goal.position;
+            }
         }
     }
 
@@ -44,6 +48,8 @@ public class Chase : MonoBehaviour {
     {
         Vector3 _rayDirection = _magnet.transform.position - transform.position;
         RaycastHit hit;
+
+        Debug.DrawRay(transform.position, _rayDirection, Color.red);
 
         if (Physics.Raycast(transform.position, _rayDirection, out hit, seeDistance))
         {
@@ -82,4 +88,11 @@ public class Chase : MonoBehaviour {
             m_greenMagnets.Remove(other.gameObject);
         }
     }
+
+    public void Stop(Transform _decal)
+    {
+        stop = true;
+        GetComponent<NavMeshAgent>().destination = _decal.position;
+    }
+
 }
