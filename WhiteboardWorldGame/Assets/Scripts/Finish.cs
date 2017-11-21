@@ -13,6 +13,7 @@ public class Finish : MonoBehaviour {
 
     private int m_NumFin = 0;
     private bool m_possible = false;
+    private bool m_Completed = false;
 
     public int maxDecals = 100;
     public int currentDecal = 0;
@@ -35,15 +36,19 @@ public class Finish : MonoBehaviour {
 
     private void Update()
     {
-        if ((m_NumFin == m_numFriend) && (m_numFriend > 0))
-        {
-            m_player.SetActive(false);
-            m_Win.SetActive(true);
-        }
-        else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
-        {
-            m_player.SetActive(false);
-            m_Lose.SetActive(true);
+        if (m_Completed == false) {
+            if ((m_NumFin == m_numFriend) && (m_numFriend > 0))
+            {
+                m_player.SetActive(false);
+                m_Win.SetActive(true);
+                m_Completed = true;
+            }
+            else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
+            {
+                m_player.SetActive(false);
+                m_Lose.SetActive(true);
+                m_Completed = true;
+            }
         }
     }
 

@@ -11,14 +11,7 @@ public class StopSameColour : MonoBehaviour {
     {
         if (other.tag == blockTag)
         {
-            if (blockTag == "BlueMagnet")
-            {
-                other.GetComponent<BlueMovement>().Stop(transform);
-            }
-            else if (blockTag == "RedMagnet")
-            {
-                other.GetComponent<Chase>().Stop(transform);
-            }
+            other.GetComponent<NavMeshAgent>().isStopped = true;
         }
     }
 }

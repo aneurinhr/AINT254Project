@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 54307984242145254}
   - component: {fileID: 195015999110471370}
   - component: {fileID: 114752511128256792}
-  - component: {fileID: 135748519950767146}
   - component: {fileID: 65322781945359188}
   - component: {fileID: 114169723357694324}
   m_Layer: 0
@@ -41,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116115216623286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.86, y: 0.201, z: -8.55}
+  m_LocalPosition: {x: 10.07, y: 0.201, z: 4.45}
   m_LocalScale: {x: 0.5, y: 0.19999999, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 341d9716bc090084dbfb4b07e6251504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Finish: {fileID: 0}
   tag: Friendly
 --- !u!114 &114752511128256792
 MonoBehaviour:
@@ -138,18 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
   seeDistance: 20
---- !u!135 &135748519950767146
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1116115216623286}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 25
-  m_Center: {x: 0, y: 0, z: 0}
+  greenMagnets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &195015999110471370
 NavMeshAgent:
   m_ObjectHideFlags: 1

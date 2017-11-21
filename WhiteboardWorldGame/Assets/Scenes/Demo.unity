@@ -581,21 +581,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 135748519950767146, guid: 486c95d5abb727b45bb60b28c0ef85f5,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: seeDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 54307984242145254, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+      propertyPath: greenMagnets.Array.data[0]
+      value: 
+      objectReference: {fileID: 928383743}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: greenMagnets.Array.data[1]
+      value: 
+      objectReference: {fileID: 119844732}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: greenMagnets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1633699847}
     - target: {fileID: 114169723357694324, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
       propertyPath: m_Finish
@@ -794,6 +794,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115712450}
+--- !u!1 &119844732 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1278015508105430, guid: feda0bacc6d34c74cbcc1eafa4a0e02c,
+    type: 2}
+  m_PrefabInternal: {fileID: 360975126}
 --- !u!1 &132390740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,6 +2564,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910990194}
+--- !u!1 &928383743 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1278015508105430, guid: feda0bacc6d34c74cbcc1eafa4a0e02c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1972412904}
 --- !u!4 &931849145 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4816198023640194, guid: feda0bacc6d34c74cbcc1eafa4a0e02c,
@@ -9904,6 +9914,10 @@ Prefab:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1384565100}
+    - target: {fileID: 1278015508105430, guid: feda0bacc6d34c74cbcc1eafa4a0e02c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: feda0bacc6d34c74cbcc1eafa4a0e02c, type: 2}
   m_IsPrefabParent: 0
@@ -9977,6 +9991,11 @@ Transform:
   m_Father: {fileID: 494280625}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1633699847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1278015508105430, guid: feda0bacc6d34c74cbcc1eafa4a0e02c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1626551982}
 --- !u!1 &1633981187
 GameObject:
   m_ObjectHideFlags: 0
@@ -11535,6 +11554,10 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1278015508105430, guid: feda0bacc6d34c74cbcc1eafa4a0e02c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: feda0bacc6d34c74cbcc1eafa4a0e02c, type: 2}
   m_IsPrefabParent: 0
@@ -11634,6 +11657,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1846405483}
     m_Modifications:
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: greenMagnets.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4479863262512078, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 14.8
@@ -11666,31 +11694,32 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 135748519950767146, guid: 486c95d5abb727b45bb60b28c0ef85f5,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
+    - target: {fileID: 1116115216623286, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
+      propertyPath: m_Name
+      value: RedMagnet (2)
       objectReference: {fileID: 0}
     - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: seeDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 54307984242145254, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+      propertyPath: greenMagnets.Array.data[0]
+      value: 
+      objectReference: {fileID: 928383743}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: greenMagnets.Array.data[1]
+      value: 
+      objectReference: {fileID: 119844732}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: greenMagnets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1633699847}
     - target: {fileID: 114169723357694324, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
       propertyPath: m_Finish
       value: 
       objectReference: {fileID: 1384565099}
-    - target: {fileID: 1116115216623286, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
-      propertyPath: m_Name
-      value: RedMagnet (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2083052064
@@ -11700,6 +11729,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1846405483}
     m_Modifications:
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: greenMagnets.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4479863262512078, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 12.5
@@ -11732,31 +11766,32 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 135748519950767146, guid: 486c95d5abb727b45bb60b28c0ef85f5,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
+    - target: {fileID: 1116115216623286, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
+      propertyPath: m_Name
+      value: RedMagnet (1)
       objectReference: {fileID: 0}
     - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: seeDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 54307984242145254, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+      propertyPath: greenMagnets.Array.data[0]
+      value: 
+      objectReference: {fileID: 928383743}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: greenMagnets.Array.data[1]
+      value: 
+      objectReference: {fileID: 119844732}
+    - target: {fileID: 114752511128256792, guid: 486c95d5abb727b45bb60b28c0ef85f5,
+        type: 2}
+      propertyPath: greenMagnets.Array.data[2]
+      value: 
+      objectReference: {fileID: 1633699847}
     - target: {fileID: 114169723357694324, guid: 486c95d5abb727b45bb60b28c0ef85f5,
         type: 2}
       propertyPath: m_Finish
       value: 
       objectReference: {fileID: 1384565099}
-    - target: {fileID: 1116115216623286, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
-      propertyPath: m_Name
-      value: RedMagnet (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 486c95d5abb727b45bb60b28c0ef85f5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2124672632 stripped
