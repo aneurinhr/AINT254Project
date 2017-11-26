@@ -22,15 +22,15 @@ GameObject:
   - component: {fileID: 33167451133223882}
   - component: {fileID: 23402907516845604}
   - component: {fileID: 54549862100650778}
-  - component: {fileID: 64367745482739764}
   - component: {fileID: 114774285925176930}
+  - component: {fileID: 65850317080578542}
   m_Layer: 12
   m_Name: RedInkDecal
   m_TagString: RedInk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4514267034891944
 Transform:
   m_ObjectHideFlags: 1
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981654660433088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0001, z: 0}
+  m_LocalPosition: {x: 0.99, y: 4.84, z: 6.69}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,8 +98,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64367745482739764
-MeshCollider:
+--- !u!65 &65850317080578542
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -108,10 +108,8 @@ MeshCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 1
-  m_SkinWidth: 0.1
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 6, y: 3, z: 6}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &114774285925176930
 MonoBehaviour:
   m_ObjectHideFlags: 1

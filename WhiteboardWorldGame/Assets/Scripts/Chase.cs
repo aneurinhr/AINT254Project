@@ -7,39 +7,40 @@ public class Chase : MonoBehaviour {
 
     public Transform goal;
     public float seeDistance = 20;
+    public GameObject[] greenMagnets;
 
-    private List<GameObject> m_greenMagnets = new List<GameObject>();
     private int currentSearch = 0;
     private bool m_seen = false;
     private bool stop = false;
-
-    private void Start()
-    {
-        m_greenMagnets.Add(gameObject);
-    }
 
     private void Update()
     {
         if (stop == false)
         {
-            if (currentSearch < 1)
+            if (currentSearch < 0)
             {
                 m_seen = false;
             }
 
-            if ((m_greenMagnets.Count > 1) && (m_seen == false))
+            if ((greenMagnets.Length > 0) && (m_seen == false))
             {
 
-                for (int i = 1; i < m_greenMagnets.Count; i++)
+                for (int i = 0; i < greenMagnets.Length; i++)
                 {
-                    DetectGreenMagnets(m_greenMagnets[i]);
+                    DetectGreenMagnets(greenMagnets[i]);
                 }
 
             }
             else if (m_seen == true)
             {
-                goal = m_greenMagnets[currentSearch].transform;
+                goal = greenMagnets[currentSearch].transform;
                 GetComponent<NavMeshAgent>().destination = goal.position;
+
+                if(greenMagnets[currentSearch].active == false)
+                {
+                    m_seen = false;
+                }
+
             }
         }
     }
@@ -51,41 +52,28 @@ public class Chase : MonoBehaviour {
 
         Debug.DrawRay(transform.position, _rayDirection, Color.red);
 
-        if (Physics.Raycast(transform.position, _rayDirection, out hit, seeDistance))
+        Ray sightRay = new Ray(transform.position, _rayDirection);
+
+        if (Physics.Raycast(sightRay, out hit, seeDistance))
         {
             if (hit.collider.CompareTag("Friendly"))
             {
                 goal = hit.collider.gameObject.transform;
                 m_seen = true;
                 GetComponent<NavMeshAgent>().destination = goal.position;
-                currentSearch = m_greenMagnets.IndexOf(hit.collider.gameObject);
+
+                for (int i = 0; i < greenMagnets.Length; i++)
+                {
+                    if (greenMagnets[i] == hit.collider.gameObject)
+                    {
+                        currentSearch = i;
+                    }
+                }
             }
             else
             {
                 m_seen = false;
             }
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Friendly")
-        {
-            m_greenMagnets.Add(other.gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Friendly")
-        {
-
-            if (m_greenMagnets.IndexOf(other.gameObject) == currentSearch)
-            {
-                currentSearch = -1;
-            }
-
-            m_greenMagnets.Remove(other.gameObject);
         }
     }
 
