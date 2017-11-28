@@ -72,7 +72,7 @@ public class DecalPool : MonoBehaviour
             decalArray[currentDecal].SetActive(true);
 
             Vector3 tempPosition = _collisionEvent.intersection;
-            tempPosition.y = 0.01f;
+            tempPosition.y = 0.38f;
 
             decalArray[currentDecal].transform.position = tempPosition;
 
