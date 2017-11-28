@@ -52,17 +52,13 @@ public class ParticleLauncher : MonoBehaviour {
 
         for(int i = 0; i < m_collisionEvents.Count; i++)
         {
-            if (decalPool.name == blackPoolName)
+            if ((decalPool.name == blackPoolName) && (m_collisionEvents[i].colliderComponent.tag != null))
             {
 
                 if ((m_collisionEvents[i].colliderComponent.tag == "Start") || (m_collisionEvents[i].colliderComponent.tag == "Finish") || (m_collisionEvents[i].colliderComponent.tag == "NextDecal"))
                 {
                     decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
                     //EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
-                }
-                else
-                {
-                    //Debug.Log(m_collisionEvents[i].colliderComponent.tag);
                 }
 
             }

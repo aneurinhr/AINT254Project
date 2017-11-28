@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114829163454345814}
   m_Layer: 0
   m_Name: BlueMagnet
-  m_TagString: Untagged
+  m_TagString: BlueMagnet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
