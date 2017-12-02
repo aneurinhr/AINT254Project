@@ -6,14 +6,31 @@ using UnityEngine.SceneManagement;
 public class ResetQuitBut : MonoBehaviour {
 
     public string sceneName = "";
+    public AudioClip button;
 
     public void ResetScene()
     {
-        SceneManager.LoadScene(sceneName);
+        GetComponent<AudioSource>().PlayOneShot(button);
+        StartCoroutine(ExecuteReset());
     }
 
     public void Quit()
     {
+        GetComponent<AudioSource>().PlayOneShot(button);
+        StartCoroutine(ExecuteQuit());
+    }
+
+    IEnumerator ExecuteReset()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator ExecuteQuit()
+    {
+        yield return new WaitForSeconds(0.3f);
+
         Application.Quit();
     }
 

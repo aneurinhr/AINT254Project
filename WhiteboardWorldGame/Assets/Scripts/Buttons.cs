@@ -6,17 +6,34 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour {
 
     public string nextScene;
+    public AudioClip button;
 
-	public void Activate()
+    public void Activate()
     {
         if (nextScene == "Quit")
         {
-            Application.Quit();
+            GetComponent<AudioSource>().PlayOneShot(button);
+            StartCoroutine(ExecuteQuit());
         }
         else
         {
-            SceneManager.LoadScene(nextScene);
+            GetComponent<AudioSource>().PlayOneShot(button);
+            StartCoroutine(ExecuteReset());
         }
+    }
+
+    IEnumerator ExecuteReset()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        SceneManager.LoadScene(nextScene);
+    }
+
+    IEnumerator ExecuteQuit()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+        Application.Quit();
     }
 
 }
