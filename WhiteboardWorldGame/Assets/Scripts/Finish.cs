@@ -19,6 +19,9 @@ public class Finish : MonoBehaviour {
     public int currentDecal = 0;
     public int m_numFriend = 0;
 
+    public AudioClip winSound;
+    public AudioClip loseSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Friendly")
@@ -42,12 +45,14 @@ public class Finish : MonoBehaviour {
                 m_player.SetActive(false);
                 m_Win.SetActive(true);
                 m_Completed = true;
+                gameObject.GetComponent<AudioSource>().PlayOneShot(winSound);
             }
             else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
             {
                 m_player.SetActive(false);
                 m_Lose.SetActive(true);
                 m_Completed = true;
+                gameObject.GetComponent<AudioSource>().PlayOneShot(loseSound);
             }
         }
     }
