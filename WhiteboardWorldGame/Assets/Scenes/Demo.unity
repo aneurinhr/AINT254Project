@@ -2537,6 +2537,7 @@ MonoBehaviour:
   decalPool: 100
   blackInk: 0
   nextDecal: OtherNextDecal
+  baseHeightDecal: 0.38
 --- !u!1001 &730909292
 Prefab:
   m_ObjectHideFlags: 0
@@ -3032,6 +3033,7 @@ MonoBehaviour:
   decalPool: 800
   blackInk: 1
   nextDecal: NextDecal
+  baseHeightDecal: 0.38
 --- !u!1 &846074649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,7 +3873,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175924897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.375, z: -18.3}
+  m_LocalPosition: {x: 0, y: 0.5, z: -18.3}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 823395216}
@@ -8005,6 +8007,7 @@ MonoBehaviour:
   decalPool: 100
   blackInk: 0
   nextDecal: OtherNextDecal
+  baseHeightDecal: 0.38
 --- !u!1001 &1516052345
 Prefab:
   m_ObjectHideFlags: 0

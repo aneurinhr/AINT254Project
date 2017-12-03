@@ -50,31 +50,33 @@ public class ParticleLauncher : MonoBehaviour {
     {
         ParticlePhysicsExtensions.GetCollisionEvents(m_particleLauncer, other, m_collisionEvents); //To store the results of OnParticleCollsion
 
-        for(int i = 0; i < m_collisionEvents.Count; i++)
+        for (int i = 0; i < m_collisionEvents.Count; i++)
         {
-            if ((decalPool.name == blackPoolName) && (m_collisionEvents[i].colliderComponent.tag != null))
-            {
 
-                if ((m_collisionEvents[i].colliderComponent.tag == "Start") || (m_collisionEvents[i].colliderComponent.tag == "Finish") || (m_collisionEvents[i].colliderComponent.tag == "NextDecal"))
+            if (m_collisionEvents[i].colliderComponent != null) {
+
+                Debug.Log(m_collisionEvents[i].colliderComponent.tag);
+
+                if (decalPool.name == blackPoolName)
                 {
-                    decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
-                    //EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
-                }
 
-            }
-            else
-            {
+                    if ((m_collisionEvents[i].colliderComponent.tag == "Start") || (m_collisionEvents[i].colliderComponent.tag == "Finish") || (m_collisionEvents[i].colliderComponent.tag == "NextDecal"))
+                    {
+                        decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
+                                                                    //EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
+                    }
 
-                if (m_collisionEvents[i].colliderComponent.tag == "OtherNextDecal")
-                {
-                    decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
-                    //EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
                 }
                 else
                 {
-                    //Debug.Log(m_collisionEvents[i].colliderComponent.tag);
-                }
 
+                    if (m_collisionEvents[i].colliderComponent.tag == "OtherNextDecal")
+                    {
+                        decalPool.PlaceDecal(m_collisionEvents[i]); //Places Ink
+                                                                    //EmitAtLocatin(m_collisionEvents[i]); //Places the splatter
+                    }
+
+                }
             }
 
         }

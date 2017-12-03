@@ -17,6 +17,7 @@ public class DecalPool : MonoBehaviour
     public int decalPool = 100;
     public bool blackInk = false;
     public string nextDecal;
+    public float baseHeightDecal = 0.38f;
 
     private int currentDecal = 0;
 
@@ -72,12 +73,14 @@ public class DecalPool : MonoBehaviour
             decalArray[currentDecal].SetActive(true);
 
             Vector3 tempPosition = _collisionEvent.intersection;
-            tempPosition.y = 0.38f;
+            tempPosition.y = baseHeightDecal;
 
             decalArray[currentDecal].transform.position = tempPosition;
 
             if (blackInk == true)
             {
+                tempPosition.y = baseHeightDecal + 0.1f;
+
                 m_NextDecal.transform.position = tempPosition;
             }
 
