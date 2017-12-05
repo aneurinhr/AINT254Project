@@ -52,3 +52,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Score
+    uniqueID: 2710216127
+    locked: 0

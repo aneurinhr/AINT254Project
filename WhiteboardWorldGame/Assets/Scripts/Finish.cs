@@ -19,6 +19,9 @@ public class Finish : MonoBehaviour {
     public int currentDecal = 0;
     public int m_numFriend = 0;
 
+    public GameObject Timer;
+    public GameObject Score;
+
     public AudioClip winSound;
     public AudioClip loseSound;
 
@@ -46,15 +49,34 @@ public class Finish : MonoBehaviour {
                 m_Win.SetActive(true);
                 m_Completed = true;
                 gameObject.GetComponent<AudioSource>().PlayOneShot(winSound);
+                Timer.GetComponent<Timer>().finished = true;
+                Score.SetActive(true);
+                ScoreFriends();
             }
             else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
             {
-                m_player.SetActive(false);
-                m_Lose.SetActive(true);
-                m_Completed = true;
-                gameObject.GetComponent<AudioSource>().PlayOneShot(loseSound);
+                GameOver();
             }
         }
+    }
+
+    private void ScoreFriends()
+    {
+        Score.GetComponent<Score>().friendsLeft = m_numFriend;
+        Score.GetComponent<Score>().timeLeft = Timer.GetComponent<Timer>().timer;
+        Score.GetComponent<Score>().CalcScore = false;
+    }
+
+    public void GameOver()
+    {
+        m_player.SetActive(false);
+        m_Lose.SetActive(true);
+        m_Completed = true;
+        gameObject.GetComponent<AudioSource>().PlayOneShot(loseSound);
+        Timer.GetComponent<Timer>().finished = true;
+
+        Score.SetActive(true);
+        Score.GetComponent<Score>().CalcScore = false;
     }
 
 }
