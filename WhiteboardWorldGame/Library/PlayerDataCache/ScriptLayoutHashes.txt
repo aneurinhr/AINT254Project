@@ -1,5 +1,5 @@
 WindowsStandalone
-63476c3cd723e567416f94104be571f7 Assembly-CSharp.dll:.ResetQuitBut
+be8238c7e1ad8bc1693e8fdac65f12b6 Assembly-CSharp.dll:.ResetQuitBut
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9f07aaefd0255462bb6e4f9e5da6b2d4 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -113,11 +113,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 c8d246d3303bdfd6b7398acf1f38d8d2 Assembly-CSharp.dll:.FriendMovement
-1aba906c4df302ac2b478b869226c4ab Assembly-CSharp.dll:.CollideGreenBothDie
-051322734839506b220c8d3643cf871c Assembly-CSharp.dll:.Finish
-2b009ed5d45af70a9e9cd9186acb7db5 Assembly-CSharp.dll:.Buttons
+5044cec28c35aa0f807cb762da4a155c Assembly-CSharp.dll:.CollideGreenBothDie
+5ed38c8dc7ed1dfafa46ec1f74f0e5f3 Assembly-CSharp.dll:.Finish
+b8db5208279eb61fc372269e6b813706 Assembly-CSharp.dll:.Buttons
 59b8f86a1ad56cbd39be97f4e679ce34 Assembly-CSharp.dll:.WhiteboardObjects
-2fd47a076cdeaa62feef4200b9cfeeec Assembly-CSharp.dll:.DecalPool
+be714a52017263f50a928215228972f1 Assembly-CSharp.dll:.DecalPool
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -142,4 +142,5 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.SpatialMappingRenderer
 230b4c994721a8193aa82ff7f0095110 Assembly-CSharp.dll:.ChangeInk
+cfc98e6e0f6d65d4a7eb551256e4ee94 Assembly-CSharp.dll:.CanvasSwapButton
 cc6e143c9bae63f719bef83a0432bf15 Assembly-CSharp.dll:.Chase
