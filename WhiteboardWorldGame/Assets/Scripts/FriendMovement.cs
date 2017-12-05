@@ -13,13 +13,14 @@ public class FriendMovement : MonoBehaviour
     public int currentDecal = 0;
     public float speed = 5.0f;
     public bool finished = false;
+    public int Spacing = 1;
 
     private int m_DecalTarget = 0;
     private bool m_NewTarget = true;
 
     private void Start()
     {
-        m_DecalTarget = m_DecalTarget - friendID;
+        m_DecalTarget = m_DecalTarget - (friendID * Spacing);
     }
 
     void Update () {
@@ -43,7 +44,7 @@ public class FriendMovement : MonoBehaviour
 
             float _step = speed * Time.deltaTime;
 
-            if ((m_DecalTarget < (currentDecal - friendID)) && (m_DecalTarget > 0))
+            if ((m_DecalTarget < (currentDecal - (friendID * Spacing))) && (m_DecalTarget > 0))
             {
                 Vector3 _moveTo = m_decalPool.GetComponent<DecalPool>().decalArray[m_DecalTarget].transform.position;
 

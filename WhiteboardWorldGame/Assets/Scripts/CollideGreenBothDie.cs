@@ -6,6 +6,8 @@ public class CollideGreenBothDie : MonoBehaviour {
 
     [SerializeField]
     private GameObject m_Finish;
+    [SerializeField]
+    private GameObject m_UI;
 
     public string tag = "Friendly";
     public AudioClip dieSound;
@@ -19,6 +21,7 @@ public class CollideGreenBothDie : MonoBehaviour {
             other.gameObject.SetActive(false);
 
             m_Finish.GetComponent<Finish>().m_numFriend = m_Finish.GetComponent<Finish>().m_numFriend - 1;
+            m_UI.GetComponent<FriendUI>().UpdateUI();
             gameObject.GetComponent<AudioSource>().PlayOneShot(dieSound);
 
             StartCoroutine(DeathWait());
