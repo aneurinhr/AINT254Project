@@ -15,6 +15,9 @@ TagManager:
   - OtherNextDecal
   - RedMagnet
   - BlueMagnet
+  - LevelUI
+  - StartUI
+  - KeepItem
   layers:
   - Default
   - TransparentFX
