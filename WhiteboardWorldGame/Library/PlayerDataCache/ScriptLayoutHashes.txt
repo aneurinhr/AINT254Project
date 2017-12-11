@@ -147,3 +147,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 cfc98e6e0f6d65d4a7eb551256e4ee94 Assembly-CSharp.dll:.CanvasSwapButton
 cc6e143c9bae63f719bef83a0432bf15 Assembly-CSharp.dll:.Chase
 d69e81deeb8247442de8fbae2da70f33 Assembly-CSharp.dll:.FriendUI
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PauseMenu

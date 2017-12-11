@@ -22,14 +22,15 @@ public class ResetQuitBut : MonoBehaviour {
 
     IEnumerator ExecuteReset()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSecondsRealtime(0.3f);
 
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
     }
 
     IEnumerator ExecuteQuit()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSecondsRealtime(0.3f);
 
         Application.Quit();
     }
