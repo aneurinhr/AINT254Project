@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLTwo
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &1323919429
 MonoBehaviour:
@@ -2159,7 +2159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLTree
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &1476690805
 MonoBehaviour:
@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLOne
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &1602477141
 MonoBehaviour:
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLFive
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &1896694878
 MonoBehaviour:
@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLSix
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &1954145057
 MonoBehaviour:
@@ -4246,7 +4246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee8c0749d4cf0429cb950f23d26b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Demo
+  nextScene: LvLFour
   button: {fileID: 8300000, guid: ad622be7c69fec44fb47338cacca458d, type: 3}
 --- !u!114 &2079446502
 MonoBehaviour:
