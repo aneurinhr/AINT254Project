@@ -23,6 +23,11 @@ public class FriendMovement : MonoBehaviour
         m_DecalTarget = m_DecalTarget - (friendID * Spacing);
     }
 
+    public void FriendFinished()
+    {
+        friendID = friendID - 1;
+    }
+
     void Update () {
 
         if (finished == false) {

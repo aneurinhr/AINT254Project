@@ -31,6 +31,14 @@ public class Finish : MonoBehaviour {
         {
             other.GetComponent<FriendMovement>().finished = true;
             other.transform.position = transform.position;
+
+            GameObject[] _friends = GameObject.FindGameObjectsWithTag("Friendly");
+            int _NumFriend = _friends.Length;
+            for (int i = 0; i < _NumFriend; i++)
+            {
+                _friends[i].GetComponent<FriendMovement>().FriendFinished();
+            }
+
             m_NumFin++;
         }
         else if (other.gameObject.tag == "Ink")
@@ -69,14 +77,17 @@ public class Finish : MonoBehaviour {
 
     public void GameOver()
     {
-        m_player.SetActive(false);
-        m_Lose.SetActive(true);
-        m_Completed = true;
-        gameObject.GetComponent<AudioSource>().PlayOneShot(loseSound);
-        Timer.GetComponent<Timer>().finished = true;
+        if (m_Completed == false)
+        {
+            m_player.SetActive(false);
+            m_Lose.SetActive(true);
+            m_Completed = true;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(loseSound);
+            Timer.GetComponent<Timer>().finished = true;
 
-        Score.SetActive(true);
-        Score.GetComponent<Score>().CalcScore = false;
+            Score.SetActive(true);
+            Score.GetComponent<Score>().CalcScore = false;
+        }
     }
 
 }

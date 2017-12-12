@@ -24,6 +24,13 @@ public class CollideGreenBothDie : MonoBehaviour {
             m_UI.GetComponent<FriendUI>().UpdateUI();
             gameObject.GetComponent<AudioSource>().PlayOneShot(dieSound);
 
+            GameObject[] _friends = GameObject.FindGameObjectsWithTag("Friendly");
+            int _NumFriend = _friends.Length;
+            for (int i = 0; i < _NumFriend; i++)
+            {
+                _friends[i].GetComponent<FriendMovement>().FriendFinished();
+            }
+
             StartCoroutine(DeathWait());
 
             m_lifes--;

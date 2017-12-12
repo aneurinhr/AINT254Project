@@ -127,3 +127,4 @@ MonoBehaviour:
   currentDecal: 0
   speed: 5
   finished: 0
+  Spacing: 20
