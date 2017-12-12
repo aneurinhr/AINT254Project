@@ -6933,7 +6933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   finished: 0
-  startTimer: 30
+  startTimer: 60
   Finish: {fileID: 752856906}
 --- !u!114 &1351697373
 MonoBehaviour:
