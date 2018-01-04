@@ -18,6 +18,9 @@ TagManager:
   - LevelUI
   - StartUI
   - KeepItem
+  - RedPen
+  - BluePen
+  - BlackPen
   layers:
   - Default
   - TransparentFX
@@ -32,7 +35,7 @@ TagManager:
   - Start
   - NextDecal
   - Inks
-  - 
+  - Pens
   - Whiteboard
   - 
   - 
