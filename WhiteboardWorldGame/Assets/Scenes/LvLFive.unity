@@ -141,7 +141,8 @@ MonoBehaviour:
   finish: {fileID: 477073050}
   inkUI: {fileID: 653092211}
   decalArray: []
-  decalPool: 100
+  decalPool: 300
+  maxPool: 800
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
@@ -14813,7 +14814,8 @@ MonoBehaviour:
   finish: {fileID: 477073050}
   inkUI: {fileID: 1521659528}
   decalArray: []
-  decalPool: 100
+  decalPool: 300
+  maxPool: 800
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
@@ -15249,6 +15251,7 @@ MonoBehaviour:
   inkUI: {fileID: 268400291}
   decalArray: []
   decalPool: 800
+  maxPool: 800
   blackInk: 1
   nextDecal: NextDecal
   baseHeightDecal: 0.38

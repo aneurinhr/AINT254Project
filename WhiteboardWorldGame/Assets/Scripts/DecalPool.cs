@@ -15,6 +15,7 @@ public class DecalPool : MonoBehaviour
     public Slider inkUI;
     public GameObject[] decalArray;
     public int decalPool = 100;
+    public int maxPool = 100;
     public bool blackInk = false;
     public string nextDecal;
     public float baseHeightDecal = 0.38f;
@@ -40,8 +41,8 @@ public class DecalPool : MonoBehaviour
             decalArray[i].SetActive(false);
         }
 
-        inkUI.maxValue = decalPool;
-        inkUI.value = inkUI.maxValue;
+        inkUI.maxValue = maxPool;
+        inkUI.value = decalPool;
 
     }
 
