@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockTag: RedMagnet
+  slowSpeed: 0.3
+  normSpeed: 3.5

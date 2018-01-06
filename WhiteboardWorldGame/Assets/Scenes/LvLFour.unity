@@ -5574,7 +5574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   finished: 0
-  startTimer: 60
+  startTimer: 45
   Finish: {fileID: 795199167}
 --- !u!114 &1220162066
 MonoBehaviour:

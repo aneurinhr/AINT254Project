@@ -8725,7 +8725,7 @@ MonoBehaviour:
   finish: {fileID: 1913436834}
   inkUI: {fileID: 8086360}
   decalArray: []
-  decalPool: 300
+  decalPool: 0
   maxPool: 800
   blackInk: 0
   nextDecal: OtherNextDecal

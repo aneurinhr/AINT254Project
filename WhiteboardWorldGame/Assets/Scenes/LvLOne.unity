@@ -2655,7 +2655,7 @@ MonoBehaviour:
   finish: {fileID: 752856906}
   inkUI: {fileID: 674373854}
   decalArray: []
-  decalPool: 300
+  decalPool: 0
   maxPool: 800
   blackInk: 0
   nextDecal: OtherNextDecal
@@ -4000,7 +4000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   finished: 0
-  startTimer: 60
+  startTimer: 50
   Finish: {fileID: 752856906}
 --- !u!114 &954641869
 MonoBehaviour:
@@ -5692,7 +5692,7 @@ MonoBehaviour:
   finish: {fileID: 752856906}
   inkUI: {fileID: 1906242248}
   decalArray: []
-  decalPool: 300
+  decalPool: 0
   maxPool: 800
   blackInk: 0
   nextDecal: OtherNextDecal
