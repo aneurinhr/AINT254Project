@@ -1542,6 +1542,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6765575dde35c574ab03433beb07683e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &329143286 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 329143285}
 --- !u!4 &329143287 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
@@ -1636,6 +1641,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6765575dde35c574ab03433beb07683e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &349154022 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 349154021}
 --- !u!4 &349154023 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
@@ -1876,8 +1886,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1465379748}
-        m_MethodName: ResetScene
+      - m_Target: {fileID: 1690420035}
+        m_MethodName: ResetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2650,6 +2660,7 @@ MonoBehaviour:
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &710593653
 Transform:
   m_ObjectHideFlags: 0
@@ -2842,6 +2853,16 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 617cab9eaa16dfb438dc898123220807, type: 2}
+    - target: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+        type: 2}
+      propertyPath: maxDecals
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+        type: 2}
+      propertyPath: numFriend
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 135695977627834066, guid: a94ae0d870929444dba0d83f44af02e0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a94ae0d870929444dba0d83f44af02e0, type: 2}
@@ -2866,6 +2887,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1134951106610710, guid: a94ae0d870929444dba0d83f44af02e0,
     type: 2}
   m_PrefabInternal: {fileID: 752856902}
+--- !u!114 &752856907 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 752856902}
+  m_Script: {fileID: 11500000, guid: 80266776c0c2b7847be85d6392af532f, type: 3}
 --- !u!65 &752856912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3433,8 +3460,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1465379748}
-        m_MethodName: ResetScene
+      - m_Target: {fileID: 1690420035}
+        m_MethodName: ResetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3581,6 +3608,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6765575dde35c574ab03433beb07683e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &874566762 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 874566761}
 --- !u!4 &874566763 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
@@ -3623,6 +3655,7 @@ MonoBehaviour:
   blackInk: 1
   nextDecal: NextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &887921575
 Transform:
   m_ObjectHideFlags: 0
@@ -5664,6 +5697,7 @@ MonoBehaviour:
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &1424205092
 Transform:
   m_ObjectHideFlags: 0
@@ -6683,6 +6717,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1685011248}
+--- !u!1 &1690420034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1690420036}
+  - component: {fileID: 1690420035}
+  m_Layer: 0
+  m_Name: Reseter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1690420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690420034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94f98c3a1e648f4984a359102ffb5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendMagnets:
+  - {fileID: 349154022}
+  - {fileID: 874566762}
+  - {fileID: 329143286}
+  blueMagnets: []
+  redMagnets: []
+  Timer: {fileID: 954641868}
+  InkPools:
+  - {fileID: 887921574}
+  - {fileID: 710593652}
+  - {fileID: 1424205091}
+  Finish: {fileID: 752856907}
+  FriendUI: {fileID: 1500094766}
+  pauseMenu: {fileID: 1790316227}
+--- !u!4 &1690420036
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690420034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5953095, y: 6.943735, z: 0.28582594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1723213456
 Prefab:
   m_ObjectHideFlags: 0
@@ -10927,7 +11015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7383eb98d2cc840b1477f80dbf1e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_camera: {fileID: 0}
   blackPool: {fileID: 887921574}
   redPool: {fileID: 710593652}
   bluePool: {fileID: 1424205091}

@@ -340,6 +340,64 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &9056447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 9056449}
+  - component: {fileID: 9056448}
+  m_Layer: 0
+  m_Name: Reseter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9056448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9056447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94f98c3a1e648f4984a359102ffb5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendMagnets:
+  - {fileID: 40895390}
+  - {fileID: 364876801}
+  - {fileID: 948841989}
+  blueMagnets:
+  - {fileID: 1671905057}
+  - {fileID: 855088473}
+  - {fileID: 661165892}
+  - {fileID: 2024707984}
+  redMagnets: []
+  Timer: {fileID: 1133603110}
+  InkPools:
+  - {fileID: 1685897613}
+  - {fileID: 949838352}
+  - {fileID: 1423917639}
+  Finish: {fileID: 1913436835}
+  FriendUI: {fileID: 1747563209}
+  pauseMenu: {fileID: 898511164}
+--- !u!4 &9056449
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9056447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5953095, y: 6.943735, z: 0.28582594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &14743478
 Prefab:
   m_ObjectHideFlags: 0
@@ -610,6 +668,11 @@ Prefab:
 --- !u!4 &40895389 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 40895388}
+--- !u!1 &40895390 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
     type: 2}
   m_PrefabInternal: {fileID: 40895388}
 --- !u!1001 &51708588
@@ -2644,6 +2707,11 @@ Prefab:
 --- !u!4 &364876800 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 364876799}
+--- !u!1 &364876801 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
     type: 2}
   m_PrefabInternal: {fileID: 364876799}
 --- !u!1 &377296252
@@ -7151,6 +7219,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4400641246519806, guid: 55ff52a2f1836a144af779ac7e521f67,
     type: 2}
   m_PrefabInternal: {fileID: 661165890}
+--- !u!1 &661165892 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1554806309721786, guid: 55ff52a2f1836a144af779ac7e521f67,
+    type: 2}
+  m_PrefabInternal: {fileID: 661165890}
 --- !u!1001 &674003437
 Prefab:
   m_ObjectHideFlags: 0
@@ -7444,8 +7517,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123200830}
-        m_MethodName: ResetScene
+      - m_Target: {fileID: 9056448}
+        m_MethodName: ResetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8226,6 +8299,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4400641246519806, guid: 55ff52a2f1836a144af779ac7e521f67,
     type: 2}
   m_PrefabInternal: {fileID: 855088471}
+--- !u!1 &855088473 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1554806309721786, guid: 55ff52a2f1836a144af779ac7e521f67,
+    type: 2}
+  m_PrefabInternal: {fileID: 855088471}
 --- !u!1 &870418657
 GameObject:
   m_ObjectHideFlags: 0
@@ -8610,6 +8688,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4647144178027970, guid: 6765575dde35c574ab03433beb07683e,
     type: 2}
   m_PrefabInternal: {fileID: 948841987}
+--- !u!1 &948841989 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1979156517694592, guid: 6765575dde35c574ab03433beb07683e,
+    type: 2}
+  m_PrefabInternal: {fileID: 948841987}
 --- !u!1 &949838351
 GameObject:
   m_ObjectHideFlags: 0
@@ -8647,6 +8730,7 @@ MonoBehaviour:
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &949838353
 Transform:
   m_ObjectHideFlags: 0
@@ -14281,6 +14365,7 @@ MonoBehaviour:
   blackInk: 0
   nextDecal: OtherNextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &1423917640
 Transform:
   m_ObjectHideFlags: 0
@@ -15896,6 +15981,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4400641246519806, guid: 55ff52a2f1836a144af779ac7e521f67,
     type: 2}
   m_PrefabInternal: {fileID: 1671905055}
+--- !u!1 &1671905057 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1554806309721786, guid: 55ff52a2f1836a144af779ac7e521f67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1671905055}
 --- !u!1001 &1672269706
 Prefab:
   m_ObjectHideFlags: 0
@@ -16145,6 +16235,7 @@ MonoBehaviour:
   blackInk: 1
   nextDecal: NextDecal
   baseHeightDecal: 0.38
+  currentDecal: 0
 --- !u!4 &1685897614
 Transform:
   m_ObjectHideFlags: 0
@@ -16709,8 +16800,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123200830}
-        m_MethodName: ResetScene
+      - m_Target: {fileID: 9056448}
+        m_MethodName: ResetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17321,6 +17412,16 @@ Prefab:
       propertyPath: Score
       value: 
       objectReference: {fileID: 464098420}
+    - target: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+        type: 2}
+      propertyPath: numFriend
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+        type: 2}
+      propertyPath: maxDecals
+      value: 800
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a94ae0d870929444dba0d83f44af02e0, type: 2}
   m_IsPrefabParent: 0
@@ -17344,6 +17445,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1134951106610710, guid: a94ae0d870929444dba0d83f44af02e0,
     type: 2}
   m_PrefabInternal: {fileID: 1913436830}
+--- !u!114 &1913436835 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114043402851931722, guid: a94ae0d870929444dba0d83f44af02e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1913436830}
+  m_Script: {fileID: 11500000, guid: 80266776c0c2b7847be85d6392af532f, type: 3}
 --- !u!1 &1938404136
 GameObject:
   m_ObjectHideFlags: 0
@@ -17758,6 +17865,11 @@ Prefab:
 --- !u!4 &2024707983 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4400641246519806, guid: 55ff52a2f1836a144af779ac7e521f67,
+    type: 2}
+  m_PrefabInternal: {fileID: 2024707982}
+--- !u!1 &2024707984 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1554806309721786, guid: 55ff52a2f1836a144af779ac7e521f67,
     type: 2}
   m_PrefabInternal: {fileID: 2024707982}
 --- !u!1001 &2033459559
