@@ -10,6 +10,12 @@ public class Timer : MonoBehaviour {
     public float startTimer;
     public GameObject Finish;
 
+    public void Reseter()
+    {
+        timer = startTimer;
+        finished = false;
+    }
+
     private void Start()
     {
         timer = startTimer;

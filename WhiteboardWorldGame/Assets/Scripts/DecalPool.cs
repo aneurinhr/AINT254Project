@@ -20,11 +20,27 @@ public class DecalPool : MonoBehaviour
     public string nextDecal;
     public float baseHeightDecal = 0.38f;
 
-    private int currentDecal = 0;
+    public int currentDecal = 0;
+
+    private Vector3 m_nextDecalStart;
+
+    public void ResetPool()
+    {
+        currentDecal = 0;
+
+        for (int i = 0; i < decalPool; i++)
+        {
+            decalArray[i].SetActive(false);
+        }
+
+        m_NextDecal.transform.position = m_nextDecalStart;
+    }
 
     // Use this for initialization
     void Start()
     {
+        m_nextDecalStart = m_NextDecal.transform.position;
+
         if (blackInk == true)//Only 1 pool is black ink
         {
             finish.GetComponent<Finish>().currentDecal = currentDecal;

@@ -17,13 +17,33 @@ public class Finish : MonoBehaviour {
 
     public int maxDecals = 100;
     public int currentDecal = 0;
-    public int m_numFriend = 0;
+    public int numFriend = 0;
 
     public GameObject Timer;
     public GameObject Score;
 
     public AudioClip winSound;
     public AudioClip loseSound;
+
+    private int m_numFriendStart;
+
+    private void Start()
+    {
+        m_numFriendStart = numFriend;
+    }
+
+    public void ResetFinish()
+    {
+        numFriend = m_numFriendStart;
+        m_Completed = false;
+        m_possible = false;
+        m_NumFin = 0;
+        Score.SetActive(false);
+        m_Win.SetActive(false);
+        m_Lose.SetActive(false);
+        currentDecal = 0;
+        m_player.SetActive(true);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,7 +71,7 @@ public class Finish : MonoBehaviour {
     private void Update()
     {
         if (m_Completed == false) {
-            if ((m_NumFin == m_numFriend) && (m_numFriend > 0))
+            if ((m_NumFin == numFriend) && (numFriend > 0))
             {
                 m_player.SetActive(false);
                 m_Win.SetActive(true);
@@ -61,7 +81,7 @@ public class Finish : MonoBehaviour {
                 Score.SetActive(true);
                 ScoreFriends();
             }
-            else if (((currentDecal >= maxDecals) && (m_possible == false)) || (m_numFriend <= 0))
+            else if (((currentDecal >= maxDecals) && (m_possible == false)) || (numFriend <= 0))
             {
                 GameOver();
             }
@@ -70,7 +90,7 @@ public class Finish : MonoBehaviour {
 
     private void ScoreFriends()
     {
-        Score.GetComponent<Score>().friendsLeft = m_numFriend;
+        Score.GetComponent<Score>().friendsLeft = numFriend;
         Score.GetComponent<Score>().timeLeft = Timer.GetComponent<Timer>().timer;
         Score.GetComponent<Score>().CalcScore = false;
     }

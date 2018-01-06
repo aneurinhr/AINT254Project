@@ -13,6 +13,25 @@ public class Chase : MonoBehaviour {
     private bool m_seen = false;
     private bool stop = false;
 
+    private Vector3 start;
+    private float normSpeed;
+
+    private void Start()
+    {
+        start = transform.localPosition;
+        normSpeed = GetComponent<NavMeshAgent>().speed;
+    }
+
+    public void Reseter()
+    {
+        currentSearch = 0;
+        m_seen = false;
+        stop = false;
+        GetComponent<NavMeshAgent>().speed = normSpeed;
+        transform.localPosition = start;
+        GetComponent<NavMeshAgent>().destination = transform.localPosition;
+    }
+
     private void Update()
     {
         if (stop == false)
@@ -36,7 +55,7 @@ public class Chase : MonoBehaviour {
                 goal = greenMagnets[currentSearch].transform;
                 GetComponent<NavMeshAgent>().destination = goal.position;
 
-                if(greenMagnets[currentSearch].active == false)
+                if(greenMagnets[currentSearch].activeSelf == false)
                 {
                     m_seen = false;
                 }

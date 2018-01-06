@@ -16,6 +16,19 @@ public class PauseMenu : MonoBehaviour {
 
 	}
 
+    public void Reseter()
+    {
+        m_Paused = false;
+        Time.timeScale = 1.0f;
+
+        int _child = transform.childCount;
+
+        for (int i = 0; i < _child; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
     void TogglePause()
     {
 

@@ -11,6 +11,25 @@ public class BlueMovement : MonoBehaviour {
     private bool foward = true;
     private bool stop = false;
 
+    private Vector3 start;
+    private float normSpeed;
+
+    private void Start()
+    {
+        start = transform.localPosition;
+        normSpeed = GetComponent<NavMeshAgent>().speed;
+    }
+
+    public void Reseter()
+    {
+        m_counter = 0;
+        foward = true;
+        stop = false;
+        GetComponent<NavMeshAgent>().speed = normSpeed;
+        transform.localPosition = start;
+        GetComponent<NavMeshAgent>().destination = transform.localPosition;
+    }
+
     void Update () {
 
         if (stop == false)

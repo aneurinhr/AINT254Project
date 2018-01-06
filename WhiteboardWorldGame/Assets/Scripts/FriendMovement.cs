@@ -18,14 +18,45 @@ public class FriendMovement : MonoBehaviour
     private int m_DecalTarget = 0;
     private bool m_NewTarget = true;
 
+    //Reseter Stuff
+    private Vector3 start;
+    private int startId;
+
     private void Start()
     {
+        //Reseter stuff
+        start = transform.localPosition;
+        startId = friendID;
+
         m_DecalTarget = m_DecalTarget - (friendID * Spacing);
+    }
+
+    public void Reseter()
+    {
+        transform.localPosition = start;
+        friendID = startId;
+
+        m_DecalTarget = 0 - (friendID * Spacing);
     }
 
     public void FriendFinished()
     {
         friendID = friendID - 1;
+    }
+
+    public void FriendDie(int deadId)
+    {
+        if (friendID != 0)
+        {
+            if (deadId > friendID)
+            {
+                friendID = friendID + 1;
+            }
+            else if (deadId < friendID)
+            {
+                friendID = friendID - 1;
+            }
+        }
     }
 
     void Update () {
