@@ -477,7 +477,7 @@ Prefab:
       value: Obstacle (5)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &92457862 stripped
@@ -570,7 +570,7 @@ Prefab:
       value: Obstacle (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &110200160 stripped
@@ -659,7 +659,7 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &131233950 stripped
@@ -785,7 +785,7 @@ Prefab:
       value: Obstacle (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &153657499 stripped
@@ -1161,7 +1161,7 @@ Prefab:
       value: Obstacle (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &236058182 stripped
@@ -1313,7 +1313,7 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &254098209 stripped
@@ -2286,7 +2286,7 @@ Prefab:
       value: Obstacle (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &667952345 stripped
@@ -2449,7 +2449,7 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &698449144 stripped
@@ -2877,7 +2877,7 @@ Prefab:
       value: Obstacle (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &732357882 stripped
@@ -3159,7 +3159,7 @@ Prefab:
       value: Obstacle (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &798748324 stripped
@@ -4717,7 +4717,7 @@ Prefab:
       value: Obstacle (4)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1131659457 stripped
@@ -5040,7 +5040,7 @@ Prefab:
       value: Obstacle (4)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1207252211 stripped
@@ -5166,7 +5166,7 @@ Prefab:
       value: Obstacle (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1229069965 stripped
@@ -5364,7 +5364,7 @@ Prefab:
       value: Obstacle (5)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1301378250 stripped
@@ -5549,7 +5549,7 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1323058403 stripped
@@ -5895,7 +5895,7 @@ Prefab:
       value: Obstacle (4)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1440506345 stripped
@@ -6939,7 +6939,7 @@ Prefab:
       value: Obstacle (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1723213457 stripped
@@ -7032,7 +7032,7 @@ Prefab:
       value: Obstacle (4)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1729382378 stripped
@@ -7125,7 +7125,7 @@ Prefab:
       value: Obstacle (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1732683004 stripped
@@ -10958,7 +10958,7 @@ Prefab:
       value: Obstacle (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1838450495 stripped
@@ -11047,7 +11047,7 @@ Prefab:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1853273107 stripped
@@ -11197,7 +11197,7 @@ Prefab:
       value: Obstacle (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1863452057 stripped
@@ -11513,7 +11513,7 @@ Prefab:
       value: Obstacle (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1905313802 stripped
@@ -15323,7 +15323,7 @@ Prefab:
       value: Obstacle (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65419907530316798, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d789be0e77eb5249b6ccd4db4054c95, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2114977747 stripped

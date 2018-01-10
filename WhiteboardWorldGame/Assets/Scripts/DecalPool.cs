@@ -34,6 +34,9 @@ public class DecalPool : MonoBehaviour
         }
 
         m_NextDecal.transform.position = m_nextDecalStart;
+
+        inkUI.maxValue = maxPool;
+        inkUI.value = decalPool;
     }
 
     // Use this for initialization

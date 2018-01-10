@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/LvLTwo.unity
-=======
-- path: Assets/Scenes/StartMenu.unity
->>>>>>> f6627a4e4733b0b70273d45260cfe45882901e30
+- path: Assets/Scenes/LvLOne.unity
   isLoaded: 1
   isActive: 1
