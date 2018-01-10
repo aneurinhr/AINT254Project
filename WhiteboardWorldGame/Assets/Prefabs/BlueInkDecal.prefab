@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockTag: BlueMagnet
-  slowSpeed: 0.3
+  slowSpeed: 0.2
   normSpeed: 3.5
