@@ -1088,11 +1088,7 @@ MonoBehaviour:
 
     Draw: Mouse Button 1
 
-    Blue Ink: 1
-
-    Black Ink: 2
-
-    Red Ink: 3'
+    Change Ink by selecting the pen you wish to use'
 --- !u!222 &738524470
 CanvasRenderer:
   m_ObjectHideFlags: 0
